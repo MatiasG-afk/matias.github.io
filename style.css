@@ -15,7 +15,7 @@ body {
     height: 100vh;
     
     /* AQUÍ PON TU IMAGEN (Revisa si es .png o .jpg) */
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('Fondo.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('fondo.png');
     
     background-size: cover;
     background-position: center;
