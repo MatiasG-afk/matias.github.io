@@ -12,8 +12,7 @@ body {
 
 /* --- ESTILO DE LA PORTADA (HERO) --- */
 .hero {
-    /* 100vh significa el 100% de la altura de la pantalla */
-    height: 100vh; 
+    height: 100vh;
     
     /* AQUÍ PON TU IMAGEN (Revisa si es .png o .jpg) */
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('Fondo.png');
