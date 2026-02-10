@@ -75,3 +75,56 @@ body {
 }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 .hidden { opacity: 0; visibility: hidden; }
+.portada-body {
+    height: 100vh;
+    overflow: hidden; /* Evita que haya scroll en la portada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Usamos tu fondo aquí también */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('fondo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.bienvenida {
+    text-align: center;
+    color: white;
+}
+
+.bienvenida h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 3rem; /* Espacio entre texto y botón */
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* --- DISEÑO DEL BOTÓN --- */
+.boton-entrar {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 2px solid #ffffff; /* Borde blanco fino */
+    color: #ffffff;
+    text-decoration: none; /* Quita el subrayado azul feo */
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease; /* Suaviza la animación */
+    text-transform: uppercase;
+}
+
+/* Efecto al pasar el mouse por encima */
+.boton-entrar:hover {
+    background-color: #ffffff; /* Se rellena de blanco */
+    color: #000000; /* Letras negras */
+    transform: scale(1.05); /* Crece un poquito */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* Brillo */
+}
