@@ -6,7 +6,7 @@
 
 body {
   min-height: 100vh;
-background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Fondo.jpg');
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Fondo.png');
  background-size: cover;      /* Cubre toda la pantalla */
     background-position: center; /* Centra la foto */
     background-repeat: no-repeat; /* No hacer mosaico */
