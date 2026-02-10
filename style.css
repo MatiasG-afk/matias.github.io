@@ -7,14 +7,17 @@
 body {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Fondo.jpg');
-  color: #e5e7eb;
-  
-  font-family: sans-serif; 
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ background-size: cover;      /* Cubre toda la pantalla */
+    background-position: center; /* Centra la foto */
+    background-repeat: no-repeat; /* No hacer mosaico */
+    background-attachment: fixed; /* Efecto elegante al hacer scroll */
+
+    color: #e5e7eb;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
