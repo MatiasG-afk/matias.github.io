@@ -6,7 +6,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(...), url('Fondo.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Fondo.jpg');
   color: #e5e7eb;
   
   font-family: sans-serif; 
