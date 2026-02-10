@@ -3,41 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Diario Humilde</title>
+    <title>Bienvenido - El Diario Humilde</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=block" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
 </head>
-<body>
-    <div id="loader">
+<body class="portada-body">
+
+    <div class="bienvenida">
+        <div id="loader">
         <div class="spinner"></div>
     </div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>EL DIARIO HUMILDE</h1>
-            <p>En construccion xd</p>
-        </div>
-    </header>
-
-    <main class="contenido-diario">
-        <article>
-            <h2>Omar</h2>
-            <p>Dx</p>
-        </article>
+        <h1>EL DIARIO HUMILDE</h1>
+        <p class="subtitulo">Economía, Análisis y Verdad</p>
         
-        <br><hr><br>
-
-        <article>
-            <h2>ECONOMÍA: ¿Qué pasa con Lucho?</h2>
-            <p>Un análisis profundo sobre la volatilidad del tipo de cambio...</p>
-        </article>
-    </main>
-
-    <script>
+        <a href="diario.html" class="boton-entrar">LEER EDICIÓN DE HOY</a>
+    </div>
+  <script>
         window.addEventListener("load", function () {
             const loader = document.getElementById("loader");
             if(loader) loader.classList.add("hidden");
         });
     </script>
+
+
 </body>
 </html>
