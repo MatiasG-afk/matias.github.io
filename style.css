@@ -1,73 +1,78 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fondo.png');
- background-size: cover;      /* Cubre toda la pantalla */
-    background-position: center; /* Centra la foto */
-    background-repeat: no-repeat; /* No hacer mosaico */
-    background-attachment: fixed; /* Efecto elegante al hacer scroll */
-
+    background-color: #0f172a; /* Fondo oscuro para la parte de noticias */
     color: #e5e7eb;
     font-family: sans-serif;
+}
+
+/* --- ESTILO DE LA PORTADA (HERO) --- */
+.hero {
+    /* 100vh significa el 100% de la altura de la pantalla */
+    height: 100vh; 
+    
+    /* AQUÍ PON TU IMAGEN (Revisa si es .png o .jpg) */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('Fondo.png');
+    
+    background-size: cover;
+    background-position: center;
+    
+    /* EL TRUCO MAGICO: La imagen se queda quieta al bajar */
+    background-attachment: fixed; 
+    
+    /* Para centrar el texto */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-h1 {
-  font-family: 'Oswald', sans-serif; 
-  
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  
-  text-transform: uppercase; 
-  letter-spacing: 2px;
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem; /* Título gigante */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* Sombra para leer mejor */
 }
 
-p {
-  font-size: 1.2rem;
-  opacity: 0.8;
-  font-weight: 300;
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
-/*PANTALLA DE CARGA XD*/ 
+
+/* --- ESTILO DE LAS NOTICIAS --- */
+.contenido-diario {
+    background-color: #020617; /* El color de fondo del "papel" */
+    padding: 80px 20px; /* Espacio alrededor del texto */
+    max-width: 800px; /* Que no sea muy ancho para leer cómodo */
+    margin: 0 auto; /* Centrar el bloque de noticias */
+    line-height: 1.6; /* Espacio entre líneas */
+}
+
+.contenido-diario h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #cbd5e1;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #334155; /* Línea debajo del título */
+    padding-bottom: 10px;
+}
+
+/*PANTALLA DE CARGA XD*/
 #loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #020617; /* Mismo color oscuro de tu fondo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Asegura que esté encima de todo */
-    transition: opacity 0.5s ease, visibility 0.5s;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #020617; display: flex; justify-content: center;
+    align-items: center; z-index: 9999; transition: opacity 0.5s ease, visibility 0.5s;
 }
-
-/* La ruedita girando */
 .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.3); /* Borde gris transparente */
-    border-top: 5px solid #ffffff; /* Parte blanca que gira */
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+    width: 50px; height: 50px; border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #ffffff; border-radius: 50%; animation: spin 1s linear infinite;
 }
-
-/* La animación de giro */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Clase para ocultar suavemente */
-.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.hidden { opacity: 0; visibility: hidden; }
