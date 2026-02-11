@@ -47,7 +47,7 @@ body {
 
 /* --- ESTILO DE LAS NOTICIAS --- */
 .contenido-diario {
-    background-color: #020617; /* El color de fondo del "papel" */
+    background-color: #0D3B30; /* El color de fondo del "papel" */
     padding: 80px 20px; /* Espacio alrededor del texto */
     max-width: 800px; /* Que no sea muy ancho para leer cómodo */
     margin: 0 auto; /* Centrar el bloque de noticias */
