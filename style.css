@@ -195,3 +195,47 @@ body {
         flex-direction: column; /* Uno debajo del otro */
     }
 }
+/* --- CABECERA ESTILO PERIÓDICO --- */
+
+.header-noticias {
+    background-color: #0f172a; /* Color oscuro de la barra */
+    padding: 15px 30px; /* Espacio arriba/abajo y lados */
+    border-bottom: 1px solid #334155; /* Línea separadora sutil */
+    
+    /* MAGIA FLEXBOX: */
+    display: flex; 
+    justify-content: space-between; /* Uno a cada extremo */
+    align-items: center; /* Centrados verticalmente */
+}
+
+/* EL RECTÁNGULO DEL LOGO */
+.marca-diario {
+    /* Aquí usamos tu foto de fondo */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fondo.png');
+    background-size: cover;
+    background-position: center;
+    
+    /* Diseño del cuadro */
+    padding: 10px 25px;
+    border: 2px solid #ffffff; /* Borde blanco elegante */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra negra */
+}
+
+.marca-diario h1 {
+    margin: 0; /* Quitamos márgenes extraños */
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem; /* Tamaño ideal para cabecera */
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px #000000; /* Sombra al texto para que se lea bien */
+}
+
+/* RESPONSIVE: En celulares, que se ponga uno debajo del otro */
+@media (max-width: 600px) {
+    .header-noticias {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
