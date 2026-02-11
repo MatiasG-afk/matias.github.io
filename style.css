@@ -195,47 +195,63 @@ body {
         flex-direction: column; /* Uno debajo del otro */
     }
 }
-/* --- CABECERA ESTILO PERIÓDICO --- */
+/* --- CABECERA ANCHA (TIPO BANNER) --- */
 
 .header-noticias {
-    background-color: #0f172a; /* Color oscuro de la barra */
-    padding: 15px 30px; /* Espacio arriba/abajo y lados */
-    border-bottom: 1px solid #334155; /* Línea separadora sutil */
+    /* 1. AQUI PONEMOS LA FOTO PARA QUE OCUPE TODO */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fondo.png');
+    background-size: cover;      /* Cubre todo el ancho */
+    background-position: center; /* Centra la imagen */
     
-    /* MAGIA FLEXBOX: */
-    display: flex; 
-    justify-content: space-between; /* Uno a cada extremo */
-    align-items: center; /* Centrados verticalmente */
+    /* 2. Tamaño y Bordes */
+    padding: 40px 50px; /* Más alto para que se luzca la foto */
+    border-bottom: 4px solid #ffffff; /* Una línea blanca elegante abajo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Sombra para que flote */
+
+    /* 3. Acomodar los elementos (Izquierda y Derecha) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* EL RECTÁNGULO DEL LOGO */
-.marca-diario {
-    /* Aquí usamos tu foto de fondo */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fondo.png');
-    background-size: cover;
-    background-position: center;
-    
-    /* Diseño del cuadro */
-    padding: 10px 25px;
-    border: 2px solid #ffffff; /* Borde blanco elegante */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra negra */
-}
-
-.marca-diario h1 {
-    margin: 0; /* Quitamos márgenes extraños */
+/* ESTILO DEL TÍTULO */
+.header-noticias h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem; /* Tamaño ideal para cabecera */
+    font-size: 3rem; /* Letra más grande */
     color: #ffffff;
+    margin: 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px #000000; /* Sombra al texto para que se lea bien */
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 6px #000000; /* Sombra fuerte para leerse bien */
 }
 
-/* RESPONSIVE: En celulares, que se ponga uno debajo del otro */
+/* ESTILO DEL BOTÓN (Para que resalte sobre la foto) */
+.btn-volver {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* MÓVIL: En celulares que se vea bien */
 @media (max-width: 600px) {
     .header-noticias {
         flex-direction: column;
-        gap: 15px;
+        padding: 20px;
         text-align: center;
+        gap: 15px;
+    }
+    .header-noticias h1 {
+        font-size: 2rem;
     }
 }
