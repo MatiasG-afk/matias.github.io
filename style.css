@@ -128,3 +128,70 @@ body {
     transform: scale(1.05); /* Crece un poquito */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* Brillo */
 }
+/* --- ESTRUCTURA DE DOS COLUMNAS --- */
+
+/* 1. El contenedor padre que organiza todo */
+.contenedor-principal {
+    display: flex; /* Esto pone los elementos uno al lado del otro */
+    max-width: 1100px; /* Ancho máximo para que no se estire demasiado */
+    margin: 40px auto; /* Centrado en la pantalla */
+    gap: 40px; /* Espacio entre la columna de texto y la de fotos */
+    padding: 0 20px;
+}
+
+/* 2. La columna de la izquierda (Texto) */
+.columna-articulos {
+    flex: 3; /* Ocupa 3 partes del espacio (75%) */
+}
+
+/* 3. La columna de la derecha (Portadas) */
+.columna-lateral {
+    flex: 1; /* Ocupa 1 parte del espacio (25%) */
+    background-color: #1e293b; /* Un fondo un poco más claro para resaltar */
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content; /* Se ajusta al tamaño del contenido */
+    position: sticky; /* Opcional: Para que te siga al bajar (a veces requiere top) */
+    top: 20px;
+}
+
+.columna-lateral h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+}
+
+/* --- ESTILO DE LAS FOTOS DE PORTADA --- */
+.portada-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.portada-item img {
+    width: 100%; /* Que la foto ocupe todo el ancho de la columnita */
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.portada-item img:hover {
+    transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+}
+
+.portada-item p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* --- RESPONSIVE (Para celulares) --- */
+/* Si la pantalla es pequeña (celular), ponemos todo en una sola columna */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column; /* Uno debajo del otro */
+    }
+}
