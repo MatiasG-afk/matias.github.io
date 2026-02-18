@@ -147,7 +147,7 @@ body {
 /* 3. La columna de la derecha (Portadas) */
 .columna-lateral {
     flex: 1; /* Ocupa 1 parte del espacio (25%) */
-    background-color: #1e293b; /* Un fondo un poco más claro para resaltar */
+    background-color: #232729; /* Un fondo un poco más claro para resaltar */
     padding: 20px;
     border-radius: 8px;
     height: fit-content; /* Se ajusta al tamaño del contenido */
